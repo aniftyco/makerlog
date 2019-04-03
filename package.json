@@ -2,9 +2,13 @@
   "name": "makerlog",
   "description": "Makerlog Node.js API Client",
   "version": "0.0.1",
-  "main": "index.js",
+  "main": "lib/index.js",
   "repository": "aniftyco/makerlog",
   "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf lib/",
+    "build": "babel src --extensions=.ts --out-dir=lib"
+  },
   "author": {
     "name": "Nifty Development, LLC",
     "email": "support@aniftyco.com",
@@ -15,5 +19,30 @@
       "name": "Josh Manders",
       "url": "https://twitter.com/joshmanders"
     }
-  ]
+  ],
+  "files": [
+    "lib/"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/dotenv": "^6.1.1",
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.12.1",
+    "dotenv": "^7.0.0",
+    "jest": "^24.5.0",
+    "prettier": "^1.16.4",
+    "rimraf": "^2.6.3",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.14.0",
+    "tslint-config-nifty": "^0.1.0",
+    "typescript": "^3.4.1"
+  },
+  "dependencies": {
+    "axios": "^0.18.0"
+  }
 }
