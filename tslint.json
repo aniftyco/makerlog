@@ -12,7 +12,9 @@
     "no-parameter-reassignment": false,
     "import-name": false,
     "no-reserved-keywords": false,
-    "no-non-null-assertion": false
+    "no-non-null-assertion": false,
+    "cyclomatic-complexity": false,
+    "variable-name": false
   },
   "jsRules": {
     "object-literal-sort-keys": false

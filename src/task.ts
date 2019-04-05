@@ -7,6 +7,7 @@ export interface IMakerlogTaskResponse {
 export interface ITask {
   id: string;
   praise(): Promise<void>;
+  complete(): Promise<void>;
 }
 
 export class Task implements ITask {
@@ -17,6 +18,10 @@ export class Task implements ITask {
   }
 
   public async praise(): Promise<void> {
+    await this.client.request('GET', `/tasks/${this.id}/praise`);
+  }
+
+  public async complete(): Promise<void> {
     await this.client.request('GET', `/tasks/${this.id}/praise`);
   }
 }
